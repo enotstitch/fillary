@@ -2,4 +2,4 @@
 import { initSwiper } from './scripts/initSwiper.js';
 
 // initHeader();
-initSwiper('.level__slider');
+initSwiper();

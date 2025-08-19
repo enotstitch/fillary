@@ -1,0 +1,10 @@
+.events {
+	&__slide {
+		display: flex;
+
+		& img {
+			margin: 0 auto;
+			border-radius: 35px;
+		}
+	}
+}
