@@ -33,6 +33,9 @@ export function initSwiper() {
 		},
 
 		breakpoints: {
+			1201: {
+				slidesPerView: 4,
+			},
 			993: {
 				slidesPerView: 3,
 			},
@@ -53,5 +56,28 @@ export function initSwiper() {
 				prevEl: '.swiper-button-prev',
 			},
 		});
+	});
+
+	new Swiper('.stock__slider', {
+		modules: [Navigation],
+		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		breakpoints: {
+			1201: {
+				slidesPerView: 4,
+			},
+			993: {
+				slidesPerView: 3,
+			},
+			769: {
+				slidesPerView: 2,
+			},
+		},
 	});
 }
