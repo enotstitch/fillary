@@ -61,6 +61,7 @@
 
 	&-events {
 		position: relative;
+		padding-bottom: 200px;
 
 		&::after {
 			content: '';
@@ -74,6 +75,10 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
+	}
+
+	&-halls {
+		padding-top: 0;
 	}
 }
 
@@ -135,6 +140,10 @@
 	}
 }
 
+.is-hidden {
+	display: none;
+}
+
 .title {
 	margin: 0 auto;
 	margin-bottom: 75px;
@@ -194,4 +203,11 @@
 		width: 35px;
 		height: 35px;
 	}
+}
+
+.swiper .swiper-button-prev.swiper-button-disabled,
+.swiper .swiper-button-next.swiper-button-disabled {
+	border: 2px solid var(--second-accent-color);
+	background-color: transparent;
+	opacity: 1;
 }

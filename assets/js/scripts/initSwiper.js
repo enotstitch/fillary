@@ -41,4 +41,17 @@ export function initSwiper() {
 			},
 		},
 	});
+
+	const halls = document.querySelectorAll('.hall__slider');
+	halls.forEach((hall) => {
+		new Swiper(hall, {
+			modules: [Navigation],
+			slidesPerView: 1,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	});
 }
