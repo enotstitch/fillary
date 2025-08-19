@@ -1,0 +1,91 @@
+@use 'mixins/adaptive-font' as *;
+
+.halls {
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 125px;
+	}
+}
+
+.hall {
+	&__slider {
+		margin-bottom: 60px;
+
+		@media (max-width: 768px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__slide {
+		& img {
+			border-radius: 55px;
+
+			@media (max-width: 768px) {
+				border-radius: 15px;
+			}
+		}
+	}
+
+	& .swiper-button-prev,
+	& .swiper-button-next {
+		left: unset;
+		right: 50px;
+		top: unset;
+		bottom: 50px;
+		transform: none;
+
+		@media (max-width: 768px) {
+			right: 20px;
+			bottom: 20px;
+		}
+
+		@media (max-width: 420px) {
+			right: 10px;
+			bottom: 10px;
+		}
+	}
+
+	& .swiper-button-prev {
+		transform: translateX(calc(-100% - 10px));
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: end;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__texts {
+		max-width: 1340px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 20px;
+		font-weight: 400;
+		line-height: 120%;
+		text-transform: uppercase;
+		color: var(--light-color);
+		@include adaptive-font(59, 32);
+
+		@media (max-width: 768px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__slogan {
+		margin: 0;
+		margin-bottom: 20px;
+		font-family: var(--font-second);
+		line-height: 130%;
+		color: var(--accent-color);
+		@include adaptive-font(30, 15);
+	}
+
+	&__text {
+		text-align: start;
+	}
+}

@@ -1,0 +1,171 @@
+.dishes {
+	&__card {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		overflow: hidden;
+		border: 3px solid #272763;
+		border-radius: 55px;
+		padding: 85px;
+		padding-left: 190px;
+		background-color: #141437;
+		gap: 20px;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			width: 830px;
+			height: 830px;
+			background-image: url('@img/dishes/light-circle.webp');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		&::before {
+			right: -510px;
+			bottom: -300px;
+		}
+
+		&::after {
+			left: 295px;
+			top: -320px;
+		}
+
+		@media (max-width: 992px) {
+			flex-direction: column;
+			gap: 150px;
+		}
+
+		@media (max-width: 1500px) {
+			padding: 50px;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 600px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 20px;
+
+		& span {
+			color: var(--accent-color);
+		}
+	}
+
+	&__text {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	&__gallery {
+		position: relative;
+		z-index: 1;
+
+		.swiper-button-prev {
+			left: 0;
+			transform: translate(-50%, -50%);
+		}
+
+		.swiper-button-next {
+			right: 0;
+			transform: translate(50%, -50%);
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			top: 50%;
+			margin: 0;
+			border-radius: 100%;
+			width: 75px;
+			height: 75px;
+			color: var(--light-color);
+			background-color: var(--second-accent-color);
+			transition: background-color var(--time);
+
+			&::after {
+				font-size: 10px;
+			}
+
+			&:hover {
+				background-color: #01000f;
+			}
+
+			@media (max-width: 768px) {
+				width: 55px;
+				height: 55px;
+			}
+
+			@media (max-width: 420px) {
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+
+	&__slider {
+		border-radius: 100%;
+		width: 690px;
+		height: 690px;
+
+		@media (max-width: 1200px) {
+			width: 500px;
+			height: 500px;
+		}
+
+		@media (max-width: 768px) {
+			width: 300px;
+			height: 300px;
+		}
+	}
+}
+
+.dishes-chef {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&::after {
+		position: absolute;
+		left: 0;
+		bottom: -75px;
+		width: 100%;
+		height: 1px;
+		background-color: #cfd4e0;
+
+		@media (max-width: 992px) {
+			content: '';
+		}
+	}
+
+	&__img {
+		border: 20px solid #333166;
+		border-radius: 100%;
+	}
+
+	&__title {
+		font-weight: 400;
+		font-style: normal;
+		font-size: 24px;
+		line-height: 125%;
+		letter-spacing: 2.4px;
+		text-align: center;
+		text-transform: uppercase;
+		color: var(--accent-color);
+	}
+
+	&__text {
+		font-weight: 300;
+	}
+}

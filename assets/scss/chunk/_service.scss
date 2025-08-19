@@ -1,0 +1,44 @@
+.service {
+	&__title {
+		margin-bottom: 35px;
+		max-width: 1340px;
+
+		& span {
+			color: var(--accent-color);
+		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 35px;
+
+		@media (max-width: 768px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		margin: 0 auto;
+		margin-bottom: 90px;
+		max-width: 1285px;
+
+		@media (max-width: 768px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__img {
+		border-radius: 55px;
+		height: 800px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@media (max-width: 768px) {
+			height: 500px;
+		}
+	}
+}
