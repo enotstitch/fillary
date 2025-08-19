@@ -80,4 +80,15 @@ export function initSwiper() {
 			},
 		},
 	});
+
+	new Swiper('.dishes__slider', {
+		modules: [Navigation],
+		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.dishes .swiper-button-next',
+			prevEl: '.dishes .swiper-button-prev',
+		},
+	});
 }

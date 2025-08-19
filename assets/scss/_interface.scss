@@ -214,3 +214,45 @@
 	background-color: transparent;
 	opacity: 1;
 }
+
+.marquee {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 180px;
+	width: 100%;
+	box-sizing: border-box;
+	white-space: nowrap;
+	gap: 75px;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		gap: 75px;
+		width: max-content;
+		animation: marquee 15s linear infinite;
+	}
+
+	&__text {
+		line-height: normal;
+		text-transform: uppercase;
+		color: var(--light-color);
+		@include adaptive-font(128, 45);
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 35px;
+		height: 35px;
+	}
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
