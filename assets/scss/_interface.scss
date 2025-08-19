@@ -59,6 +59,31 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	&-hero {
+		position: relative;
+		margin-bottom: -75px;
+		padding-bottom: 365px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 50px;
+			background: linear-gradient(180deg, rgb(7 21 63 / 0%) 0%, #07153f 100%);
+		}
+	}
+
+	&-level {
+		position: relative;
+		z-index: 1;
+		padding-top: 0;
+	}
+
 	&-events {
 		position: relative;
 		padding-bottom: 200px;
@@ -118,6 +143,10 @@
 	text-transform: uppercase;
 	color: #f3feff;
 	@include adaptive-font(240, 72);
+
+	@media (max-width: 768px) {
+		letter-spacing: 7px;
+	}
 }
 
 .socials {
@@ -125,6 +154,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 15px;
+	width: fit-content;
 
 	&__link {
 		display: flex;
@@ -156,6 +186,10 @@
 	&--horizontal {
 		flex-direction: row;
 	}
+
+	@media (max-width: 992px) {
+		flex-direction: row;
+	}
 }
 
 .accent-text {
@@ -169,6 +203,10 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--accent-color);
+
+	@media (max-width: 768px) {
+		letter-spacing: 10px;
+	}
 }
 
 .text {

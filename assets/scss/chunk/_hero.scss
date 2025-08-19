@@ -1,8 +1,13 @@
 .hero {
+	display: flex;
+	align-items: end;
+	padding-left: 80px;
+
 	&-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		margin: 0 auto;
 
 		&__logo {
 			margin-bottom: 40px;
@@ -13,5 +18,12 @@
 			margin-bottom: 35px;
 			max-width: 680px;
 		}
+	}
+
+	@media (max-width: 992px) {
+		flex-direction: column;
+		align-items: center;
+		padding-left: 0;
+		gap: 55px;
 	}
 }
