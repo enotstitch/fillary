@@ -1,18 +1,21 @@
 // * Максимальная и минимальная ширина макета
-$container-width: 1400;
-$mobile-width: 420;
+$container-width: 1870;
+$mobile-width: 400;
 
 :root {
 	// * Цвета
 	--dark-color: #000;
-	--light-color: #fff;
-	--bg-color: #e27d5f;
-	--accent-color: #9fd4ff;
+	--light-color: #f3feff;
+	--bg-color: #07153f;
+	--accent-color: #ffd781;
+	--hover-accent-color: #ffcb5b;
+	--second-accent-color: #01b8de;
+	--text-link-color: #4a3a18;
 	--error-color: #f06464;
 
 	// * Шрифты
-	--font-main: 'Circe', sans-serif;
-	--font-second: 'Poppins', sans-serif;
+	--font-main: 'Forum', sans-serif;
+	--font-second: 'Onest', sans-serif;
 	--line-height: 120%;
 
 	// * Визуал
