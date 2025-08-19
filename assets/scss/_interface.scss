@@ -55,6 +55,9 @@
 
 .section {
 	padding: 125px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .main-title {
@@ -88,10 +91,10 @@
 	font-family: var(--font-second);
 	font-weight: 400;
 	font-style: normal;
-	font-size: 22px;
 	line-height: 145%;
 	text-align: center;
-	color: #fff;
+	color: var(--light-color);
+	@include adaptive-font(22, 15);
 }
 
 .link {
@@ -99,14 +102,79 @@
 	padding: 40px 50px;
 	font-family: var(--font-second);
 	font-weight: 600;
-	font-size: 20px;
 	line-height: normal;
 	text-align: center;
 	color: var(--text-link-color);
 	background-color: var(--accent-color);
 	transition: background-color var(--time);
+	@include adaptive-font(20, 15);
 
 	&:hover {
 		background-color: var(--hover-accent-color);
+	}
+
+	@media (max-width: 768px) {
+		padding: 30px 45px;
+	}
+}
+
+.title {
+	margin: 0 auto;
+	margin-bottom: 75px;
+	max-width: 700px;
+	line-height: 130%;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--light-color);
+	@include adaptive-font(59, 32);
+
+	@media (max-width: 992px) {
+		margin-bottom: 35px;
+	}
+}
+
+.subtitle {
+	margin: 0;
+	margin-bottom: 15px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 4.86px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--accent-color);
+	@include adaptive-font(18, 12);
+
+	@media (max-width: 992px) {
+		margin-bottom: 5px;
+	}
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+	margin: 0;
+	border-radius: 100%;
+	width: 75px;
+	height: 75px;
+	background-color: var(--second-accent-color);
+	transform: translateY(-50%);
+	transition: filter var(--time);
+
+	&::after {
+		font-size: 10px;
+		color: var(--light-color);
+	}
+
+	&:hover {
+		filter: brightness(0.7);
+	}
+
+	@media (max-width: 768px) {
+		width: 55px;
+		height: 55px;
+	}
+
+	@media (max-width: 420px) {
+		width: 35px;
+		height: 35px;
 	}
 }
