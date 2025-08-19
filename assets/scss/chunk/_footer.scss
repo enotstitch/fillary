@@ -1,0 +1,141 @@
+@use 'mixins/adaptive-font' as *;
+
+.footer {
+	position: relative;
+	overflow: hidden;
+	padding-top: 25px;
+	padding-bottom: 70px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -640px;
+		z-index: -1;
+		width: 1350px;
+		height: 1110px;
+		background-image: url('@img/footer/light-circle.webp');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateX(-50%);
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+
+		@media (max-width: 992px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 45%;
+
+		@media (max-width: 992px) {
+			max-width: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 120px;
+
+		@media (max-width: 768px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__phone {
+		margin-bottom: 25px;
+		line-height: normal;
+		color: var(--light-color);
+		transition: filter var(--time);
+		@include adaptive-font(100, 40);
+
+		&:hover {
+			filter: brightness(0.7);
+		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__time {
+		margin-bottom: 55px;
+		letter-spacing: 4.86px;
+		text-transform: uppercase;
+		color: var(--accent-color);
+		@include adaptive-font(18, 12);
+
+		@media (max-width: 768px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__address {
+		position: relative;
+		margin-bottom: 55px;
+		padding-left: 45px;
+		font-family: var(--font-third);
+		font-weight: 600;
+		font-style: normal;
+		font-size: 24px;
+		line-height: 120%;
+		letter-spacing: -0.72px;
+		color: var(--light-color);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 20px;
+			height: 25px;
+			background-image: url('@img/icons/sprite.svg#mark');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translateY(-50%);
+		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__copyright {
+		font-family: var(--font-second);
+		color: var(--light-color);
+		opacity: 0.3;
+		@include adaptive-font(18, 12);
+	}
+
+	&__map {
+		overflow: hidden;
+		border-radius: 50px;
+		width: 100%;
+		height: 700px;
+		max-width: 45%;
+		background-color: #56d352;
+
+		@media (max-width: 1200px) {
+			height: 500px;
+		}
+
+		@media (max-width: 992px) {
+			height: 300px;
+			max-width: 100%;
+		}
+	}
+}

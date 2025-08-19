@@ -120,6 +120,44 @@
 	@include adaptive-font(240, 72);
 }
 
+.socials {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+
+	&__link {
+		display: flex;
+		flex-shrink: 0;
+		border: 2px solid var(--second-accent-color);
+		border-radius: 100%;
+		padding: 30px;
+		transition: background-color var(--time);
+
+		&:hover {
+			background-color: var(--second-accent-color);
+		}
+
+		@media (max-width: 768px) {
+			padding: 15px;
+		}
+	}
+
+	&__icon {
+		width: 15px;
+		height: 15px;
+
+		@media (max-width: 768px) {
+			width: 10px;
+			height: 10px;
+		}
+	}
+
+	&--horizontal {
+		flex-direction: row;
+	}
+}
+
 .accent-text {
 	margin: 0;
 	font-family: var(--font-main);
